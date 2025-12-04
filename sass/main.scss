@@ -1,0 +1,67 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: rgba(220,240,255);
+}
+h1, h2, p#mensaje, section#timer {
+  text-align: center;
+  width: 100%;
+  &.hidden{
+    display: none;
+  }
+}
+#seccionInicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &.hidden{
+    display: none;
+  }
+}
+section#timer {
+  font-size: 20px;
+  & p {
+    font-size: 24px;
+  }
+}
+div#cuadriculaJuego {
+  box-sizing: border-box;
+  border: 2px solid black;
+  max-width: 600px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  & div.cuadrante {
+    box-sizing: border-box;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    &>* {
+      //font-family: 'Times New Roman', Times, serif;
+      box-sizing: border-box;
+      margin: 0;
+      width: 100%;
+      aspect-ratio: 1;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 500;
+      border: 1px solid black;
+      &:invalid {
+        color: red;
+        background-color: rgba(255, 0, 0, 0.15);
+      }
+    }
+  }
+}
+div#controles{
+  text-align: center;
+}
+[data-mark="1"]{
+  background-color: rgba(0,0,0,0.1);
+}
+.hidden{
+  display: none;
+}

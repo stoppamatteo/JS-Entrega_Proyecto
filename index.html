@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolución de Sudoku</title>
+  </head>
+  <body>
+    <h1>Resolución de Sudoku</h1>
+    <section id="seccionInicio">
+      <h2>¿Como empezamos?</h2>
+      <button id="cargar">Carga tu sudoku</button>
+      <article id="nuevoSudoku">
+        <button id="nuevo">Empieza uno nuevo</button>
+        <label for="selector">Nivel:</label>
+        <select name="selector" id="selector" required>
+          <option value="">-</option>
+          <option value="easy">Fácil</option>
+          <option value="medium">Medio</option>
+          <option value="hard">Difícil</option>
+        </select>
+      </article>
+      <button id="restaurar">Reanudar juego</button>
+    </section>
+    <p id="mensaje">Inserta tu sudoku:</p>
+    <section id="tablero">
+      <section id="timer">
+        <h3>Tiempo total:</h3>
+        <p id="tiempoTimer">00:00:00</p>
+      </section>
+      <div id="cuadriculaJuego">
+      </div>
+    </section>
+    <div id="controles">
+      <button id="validarCargar">Valida & Inicia</button>
+      <button id="resolver">Resolver</button>
+    </div>
+    
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
