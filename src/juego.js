@@ -79,7 +79,7 @@ function solucionSudoku(arrayElementos,tablero,pasosMax=[100000]){
                     }
                 }
                 let nuevoTablero = cargaOpcion(tablero, elemento, 0);                       //Si se han probado todas las opciones posibles de esta celda sin devolver un resultado positivo, restablecemos el valor de la celda a 0 para pasar el tablero limpio al paso anterior
-                return [false, tablero];                                                    //Devolvemos el array de la solución con el primer elemento false y el tablero
+                return [false, nuevoTablero];                                                    //Devolvemos el array de la solución con el primer elemento false y el tablero
             } else {                                                                    //Si el array de opciones posibles está vacío
                 return [false, tablero];                                                    //Devolvemos el array de la solución con el primer elemento false y el tablero
             }
